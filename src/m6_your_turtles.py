@@ -33,29 +33,48 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 import rosegraphics as rg
 
 window = rg.TurtleWindow()
-matt = rg.SimpleTurtle()
+sky = rg.SimpleTurtle()
 
-matt.pen = rg.Pen('yellow', 100)
-matt.speed = 10
+sky.pen = rg.Pen('sky blue', 200)
+sky.speed = 10
 
-matt.pen_up()
-matt.right(90)
-matt.forward(-80)
-matt.left(90)
-matt.pen_down()
-
-matt.draw_circle(50)
-
-
-grass = rg.SimpleTurtle()
-
-grass.pen = rg.Pen('green',100)
-grass.speed = 10
+sky.pen_up()
+sky.forward(360)
+sky.right(90)
+sky.forward(300)
+sky.right(90)
+sky.pen_down()
 
 
-grass.forward(400)
-grass.backward(800)
+for k in range(4):
 
+    sky.forward(720)
+    sky.right(90)
+    sky.forward(100)
+    sky.right(90)
+    sky.forward(720)
+    sky.left(90)
+    sky.forward(100)
+    sky.left(90)
+
+sun = rg.SimpleTurtle()
+
+sun.pen = rg.Pen('yellow', 100)
+sun.speed = 10
+
+sun.draw_circle(50)
+
+sun.left(90)
+sun.forward(50)
+
+sun.pen = rg.Pen('yellow',20)
+
+
+
+for k in range(9):
+    sun.forward(160)
+    sun.backward(160)
+    sun.right(40)
 
 
 window.close_on_mouse_click()
