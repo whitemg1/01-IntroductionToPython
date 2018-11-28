@@ -33,7 +33,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 import rosegraphics as rg
 
 window = rg.TurtleWindow()
-sky = rg.SimpleTurtle('t')
+sky = rg.SimpleTurtle()
 
 sky.pen = rg.Pen('sky blue', 200)
 sky.speed = 10
